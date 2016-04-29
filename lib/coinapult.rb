@@ -2,7 +2,7 @@ require 'uri'
 require 'json'
 require 'base64'
 require 'openssl'
-require 'rest_client'
+require 'rest-client'
 require 'securerandom'
 
 if OpenSSL::SSL::SSLContext::METHODS.include? :TLSv1_2
@@ -246,7 +246,7 @@ proceeding with the account creation. #{result['info']}"
     values = {}
     values['transaction_id'] = transaction_id unless transaction_id.nil?
     values['type'] = typ unless typ.nil?
-    values['currency'] = currency unless currency.nil
+    values['currency'] = currency unless currency.nil?
     values['to'] = to unless to.nil?
     values['from'] = fro unless fro.nil?
     values['extOID'] = external_id unless external_id.nil?
